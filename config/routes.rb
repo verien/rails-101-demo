@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   # root 'Controller#Action'
   # welcome#index表示，首頁會使用welcome這個控制器的index行為。
   root 'welcome#index'

@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_group
 # before_action 是一個常見的 controller 技巧,用來收納重複的程式碼。
 # before_action 可以用 only,指定某些 action 執行:
