@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  namespace :account do
+    resources :groups
+    resources :posts
+  end
+
   devise_for :users
   # root 'Controller#Action'
   # welcome#index表示，首頁會使用welcome這個控制器的index行為。

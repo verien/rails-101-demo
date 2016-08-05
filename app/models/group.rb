@@ -3,7 +3,7 @@ class Group < ActiveRecord::Base
   validates :description, presence: true
   validates :title, format: { with: /\A[a-zA-Z]+\z/, message: "Only allows letters"}
 
-  has_many :posts
+  has_many :posts, dependent: :destroy
   has_many :group_users
   has_many :members, through: :group_users, source: :user
 
